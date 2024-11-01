@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="../static/CSS/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../static/JS/main.js"></script>
+    <title>へいとたかしくんのすくれいぴんぐEX</title>
+</head>
+<!--    
+###############################################
+###########これはテスト用のデータです############
+###############################################
+ -->
+<body>
+    <div class="hero">{{test_echo}}</div>
+    <div class="python_f">
+        <form action="/index" method="POST" enctype="multipart/form-data">
+            <input class="show" type="url" name="URL" placeholder="URLを入力" required>
+            <input class="show" value="Start" type="submit"><br>
+            <p class="hidden">画像の形式を選択してください</p>
+            <p class="hidden">
+                <label><input type="radio" name="image" value="jpg">jpg/jpeg</label>
+                <label><input type="radio" name="image" value="gif">gif</label>
+                <label><input type="radio" name="image" value="ping">ping</label>
+                <label><input type="radio" name="image" value="original" required>original(形式変換無し)</label><br>
+            </p>
+            <p class="hidden">この処理には少々時間がかかる場合があります。ご了承ください。</p>
+        </form>
+    </div>
+
+
+    <div class="IMG_1">
+        {% block content %}
+        <!-- img -->
+        {% endblock %}
+    </div>
+    <div id="site" class="foot_useA">
+        
+            <h3>このサイトについて</h3>
+            <p>
+                &nbsp;このサイトはegaが作成した就職活動に向けてのportfolioの一部となります。 <br>
+                稼働しているときもあれば稼働していない時もありますのでご了承ください。  <br>
+                &nbsp;また、このサイトでは色んなサイトから画像を抽出することが出来ますが、著作権等の全ての権利はそのサイト様や制作者様にあるため、利用される際は著作権や全ての権利等にご注意ください。
+                スクレイピングが禁止されているサイトからはスクレイピングできないようにしておりますが、念のため確認をしていただきますようお願いいたします。
+            </p>
+            <div class="close"></div>
+        <!-- <img src="" alt=""> -->
+    </div>
+    <div id="howtouse" class="foot_useB">
+        <h3>このサイトの使い方</h3>
+        <ul>
+            <li>urlを入力するとそのサイトに掲載されている一部画像を抽出/出力する事ができます。</li>
+            <li>チェック項目を選択すると任意の画像形式に変換し、抽出/出力する事が出来ます。<br>
+                「よくわからない…」という方は、originalを選択してください。</li>
+            <li>また、画像の量が多いと時間がかかる場合がありますので、ご了承ください。</li>
+            <li>ページを離れると抽出/出力した画像はすべて消えるようにしてありますので、ページを離れる際はご注意ください</li>
+        </ul>
+        <div class="close"></div>
+    </div>
+    <nav>
+        <button class="foot_useA">このサイトについて</button>
+        <button class="foot_useB">このサイトの使い方</button>
+    </nav>
+    <footer></footer>
+
+</body>
+</html>

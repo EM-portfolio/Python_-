@@ -1,0 +1,33 @@
+<!-- 下記継承ブロック(継承元base.html) -->
+{% extends "base.html" %}
+{% block content %}
+
+{% for e in data %}
+    <style>
+        body, html {
+            overflow:scroll;
+        }
+        .IMG{
+            margin-top: 10%;
+        }
+        p {
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        // スクレイピングが完了したらメッセージを変更
+        document.addEventListener("DOMContentLoaded", function() {
+            const navButtons = document.getElementById("nav-buttons");
+            const message = document.createElement("p");
+            message.textContent = "画像が用意出来ました。スクロールしてください。";
+            message.style.color = "#0e536d";
+            message.style.fontWeight = "bold";
+            message.style.marginTop = "10px";
+            navButtons.insertAdjacentElement("beforebegin", message);
+        });
+    </script>
+
+    <img class="IMG" src="../static/Simages/{{ e }}" alt="{{ e }}" style="margin-top: 10%;">
+{%  endfor %}
+
+{% endblock %}
