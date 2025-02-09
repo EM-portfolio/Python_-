@@ -28,4 +28,7 @@
    - 任意の画像拡張子に合わせて取得できるように調整しました。
 
 2. **サーバー負荷を考慮**
-   - `time.sleep(0.5)` を入れて、スクレイピングの間隔を調整（サイトに負担をかけないように配慮）  
+   - `time.sleep(0.5)` を入れて、スクレイピングの間隔を調整（サイトに負担をかけないように配慮）
+
+## 🎥 デモ動画
+[Demo Video](https://github.com/EM-portfolio/Python_-/blob/main/ScrapingWebApp.mp4)
